@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄金比率メイク講習 お申し込み｜IBCA</title>
+<meta name="description" content="IBCA 黄金比率メイク講習のお申し込みフォームです。2026年3月26日開催。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   IBCA — 黄金比率メイク講習 申し込みフォーム
+   Sakuma Design OS v2 準拠 / IBCA トーン
+   ============================================================ */
+
+:root {
+  --primary:        #3B3B3B;
+  --primary-light:  #555555;
+  --accent:         #C43766;
+  --accent-hover:   #A82D56;
+  --bg-main:        #FFFFFF;
+  --bg-section:     #F7F7F7;
+  --text-primary:   #3B3B3B;
+  --text-secondary: #6B6B6B;
+  --text-muted:     #999999;
+  --border:         #DCDCDC;
+  --border-focus:   #C43766;
+  --error:          #D32F2F;
+
+  --font-body: "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
+
+  --space-xs:  8px;
+  --space-sm:  13px;
+  --space-md:  21px;
+  --space-lg:  34px;
+  --space-xl:  55px;
+  --space-2xl: 89px;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-section);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  background: var(--primary);
+  padding: var(--space-md) 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+}
+
+.header-title {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+.main {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+/* --- Page Title --- */
+.page-title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.page-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-xs);
+}
+
+.page-title-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* --- Overview --- */
+.overview {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.overview-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--accent);
+}
+
+.overview-table {
+  width: 100%;
+}
+
+.overview-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-table tr:last-child {
+  border-bottom: none;
+}
+
+.overview-table th {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: var(--space-sm) 0;
+  width: 110px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.overview-table td {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  padding: var(--space-sm) 0;
+  line-height: 1.6;
+}
+
+.overview-table .price-tax {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   FORM
+   ============================================================ */
+.form-card {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* --- Form Section --- */
+.form-section {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--accent);
+  line-height: 1.3;
+}
+
+/* --- Form Group --- */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.form-label .required {
+  color: var(--accent);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* --- Form Controls --- */
+.form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 10px 13px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--border-focus);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B6B6B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  padding-right: 36px;
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* --- Radio Group --- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.radio-label:hover {
+  border-color: var(--primary-light);
+  background: var(--bg-section);
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* --- Consent Section --- */
+.consent-box {
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.checkbox-label a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-label .required {
+  color: var(--accent);
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+/* --- Submit --- */
+.form-submit {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.btn-submit {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--accent);
+  border: none;
+  border-radius: 3px;
+  padding: 16px 0;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background: var(--accent-hover);
+}
+
+.btn-submit:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.submit-note {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+}
+
+/* --- Thanks Message --- */
+.thanks-message {
+  display: none;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+}
+
+.thanks-message.show {
+  display: block;
+}
+
+.thanks-message h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.thanks-message p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--primary);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.15em;
+}
+
+.footer-copy {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--space-xs);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .page-title h1 {
+    font-size: 20px;
+  }
+
+  .overview {
+    padding: var(--space-md);
+  }
+
+  .overview-table th {
+    width: 90px;
+    font-size: 12px;
+  }
+
+  .overview-table td {
+    font-size: 13px;
+  }
+
+  .form-section {
+    padding: var(--space-md);
+  }
+
+  .form-submit {
+    padding: var(--space-md);
+  }
+
+  .btn-submit {
+    max-width: 100%;
+  }
+
+  .header-title {
+    font-size: 11px;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="https://ibca.jp" class="header-logo">IBCA</a>
+      <span class="header-title">黄金比率メイク講習 お申し込み</span>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+    <div class="container">
+
+      <!-- Page Title -->
+      <div class="page-title">
+        <h1>黄金比率メイク講習<br>お申し込み</h1>
+        <p class="page-title-sub">以下のフォームに必要事項をご記入ください</p>
+      </div>
+
+      <!-- [2] Overview -->
+      <div class="overview">
+        <h2 class="overview-title">講習概要</h2>
+        <table class="overview-table">
+          <tr>
+            <th>開催日</th>
+            <td>2026年3月26日</td>
+          </tr>
+          <tr>
+            <th>受講料</th>
+            <td>150,000円（税別）<span class="price-tax">／ 165,000円（税込）</span></td>
+          </tr>
+          <tr>
+            <th>お支払い</th>
+            <td>銀行振込</td>
+          </tr>
+          <tr>
+            <th>会場</th>
+            <td>東京（詳細は受講確定後にご案内）</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Form -->
+      <form id="applyForm" class="form-card" action="#" method="POST">
+
+        <!-- [3] Section A: 基本情報 -->
+        <div class="form-section">
+          <h3 class="form-section-title">基本情報</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="name">お名前（漢字）<span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="例）山田 花子">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="name_kana">お名前（フリガナ）<span class="required">*</span></label>
+            <input type="text" id="name_kana" name="name_kana" class="form-input" required placeholder="例）ヤマダ ハナコ">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">メールアドレス<span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="例）example@email.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="tel">電話番号<span class="required">*</span></label>
+            <input type="tel" id="tel" name="tel" class="form-input" required placeholder="例）090-1234-5678">
+          </div>
+        </div>
+
+        <!-- [4] Section B: 受講希望内容 -->
+        <div class="form-section">
+          <h3 class="form-section-title">受講希望内容</h3>
+
+          <div class="form-group">
+            <label class="form-label">受講形式<span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="format" value="会場対面（東京）" required>
+                会場対面（東京）
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="format" value="ハイブリッド希望">
+                ハイブリッド希望
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- [5] Section C: 事前ヒアリング -->
+        <div class="form-section">
+          <h3 class="form-section-title">事前ヒアリング</h3>
+
+          <div class="form-group">
+            <label class="form-label" for="work">現在のお仕事・活動</label>
+            <input type="text" id="work" name="work" class="form-input" placeholder="例）美容師、メイクアップアーティスト、サロン経営 等">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="experience">メイク経験年数</label>
+            <select id="experience" name="experience" class="form-select">
+              <option value="" selected disabled>選択してください</option>
+              <option value="1年未満">1年未満</option>
+              <option value="1〜3年">1〜3年</option>
+              <option value="3〜5年">3〜5年</option>
+              <option value="5〜10年">5〜10年</option>
+              <option value="10年以上">10年以上</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="concerns">現在のお悩み</label>
+            <textarea id="concerns" name="concerns" class="form-textarea" placeholder="例）仕上がりの左右差、グラデーションが苦手 等"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="goals">講習後にどうなりたいか</label>
+            <textarea id="goals" name="goals" class="form-textarea" placeholder="例）自信を持ってメイクを教えられるようになりたい 等"></textarea>
+          </div>
+        </div>
+
+        <!-- [6] Section D: 同意事項 -->
+        <div class="form-section">
+          <h3 class="form-section-title">同意事項</h3>
+
+          <div class="consent-box">&#9632;キャンセル規定
+・2週間前まで：全額返金（振込手数料除く）
+・1週間前まで：50%返金
+・当日キャンセル：返金不可</div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="cancel_policy" required>
+              <span>キャンセルポリシーに同意する<span class="required">*</span></span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="privacy_policy" required>
+              <span><a href="https://ibca.jp/privacy-policy/" target="_blank">プライバシーポリシー</a>に同意する<span class="required">*</span></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- [7] Submit -->
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">申し込む</button>
+          <p class="submit-note">送信後、確認メールが届かない場合はお問い合わせください</p>
+        </div>
+
+      </form>
+
+      <!-- Thanks Message -->
+      <div id="thanksMessage" class="thanks-message">
+        <h2>お申し込みありがとうございます</h2>
+        <p>
+          確認メールをお送りしましたのでご確認ください。<br>
+          メールが届かない場合は、迷惑メールフォルダをご確認いただくか、<br>
+          お手数ですがお問い合わせください。
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">IBCA</div>
+      <p class="footer-copy">&copy; IBCA All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+  (function() {
+    var form = document.getElementById('applyForm');
+    var thanks = document.getElementById('thanksMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Hide form, show thanks
+      form.style.display = 'none';
+      thanks.classList.add('show');
+
+      // Scroll to thanks message
+      thanks.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  })();
+  </script>
+
+</body>
+</html>
