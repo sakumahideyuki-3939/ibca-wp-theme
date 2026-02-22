@@ -1,0 +1,5 @@
+# Fonts (too large for git, download via script)
+fonts/*.ttf
+
+# Logo source PDF
+assets/ibca_logo.pdf
